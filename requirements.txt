@@ -1,0 +1,4 @@
+# requirements.txt
+python-telegram-bot==22.6
+gspread==6.1.2
+google-auth==2.35.0
