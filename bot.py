@@ -1,9 +1,15 @@
 import sys
-print("PYTHON:", sys.executable)
-print("SYS.PATH[0:3]:", sys.path[:3])
+import logging
 
-import gspread
-from google.oauth2.service_account import Credentials
+print("PYTHON:", sys.executable, flush=True)
+print("SYS.PATH[0:3]:", sys.path[:3], flush=True)
+
+try:
+    import gspread
+    print("GSPREAD IMPORT: OK", flush=True)
+except Exception as e:
+    print("GSPREAD IMPORT: FAILED ->", repr(e), flush=True)
+    raise
 
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
