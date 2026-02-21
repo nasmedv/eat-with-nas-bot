@@ -1,9 +1,6 @@
-# bot.py
-import os
-import json
-import base64
-import logging
-from typing import Dict, List, Optional
+import sys
+print("PYTHON:", sys.executable)
+print("SYS.PATH[0:3]:", sys.path[:3])
 
 import gspread
 from google.oauth2.service_account import Credentials
